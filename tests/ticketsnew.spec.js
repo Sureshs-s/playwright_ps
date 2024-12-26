@@ -66,9 +66,17 @@ test.only ("Dropdown2" ,async({page})=>{
   
   await page.goto("https://testautomationpractice.blogspot.com/");
 
-  const dropdownfile= await page.selectOption("//select[@id='country']/option").getByAltText();
+  await page.$$("//select[@id='country']/option");
 
-  console.log(dropdownfile);
+  const dropdownfile= await page.locator("//select[@id='country']/option");
+
+
+
+  //const restaurantNames = []
+  for (const option of dropdownfile){
+    const listing = await option.textContent();
+  }
+  console.log("printing the country :" + listing);
 
 
 

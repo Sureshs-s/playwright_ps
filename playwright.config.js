@@ -26,9 +26,9 @@ module.exports = defineConfig({
   use: {
 
     //time set by suresh//******SURESH*********** */
-    headless : false,
+    /*headless : true,
     actionTimeout: 10 * 1000,
-    navigationTimeout: 30 * 1000,
+    navigationTimeout: 30 * 1000,*/
 
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -41,7 +41,11 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'] ,
+        Viewport:null,
+        launchOptions:{args:['--start-maximized']}
+      },
+      
     },
 
     /*{
