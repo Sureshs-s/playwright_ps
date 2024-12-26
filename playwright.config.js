@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+const { on } = require('events');
 
 /**
  * Read environment variables from file.
@@ -24,7 +25,7 @@ module.exports = defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-
+    
     //time set by suresh//******SURESH*********** */
     /*headless : true,
     actionTimeout: 10 * 1000,
@@ -41,12 +42,20 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] ,
+      use: 
+      
+      {browserName:'chromium',
+        /*'Desktop Chrome'] */
         Viewport:null,
-        launchOptions:{args:['--start-maximized']}
+
+       // launchOptions: {args: ['--start-maximized']},
+        
+        },
+             
+
       },
       
-    },
+    
 
     /*{
       name: 'firefox',

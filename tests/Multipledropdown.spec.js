@@ -40,6 +40,8 @@ await page.waitForLoadState();
     hotelNames.push(text.trim());
   }
 
+
+  await page.get
   // Print the hotel names
   console.log('Hotel Names:', hotelNames);
 
