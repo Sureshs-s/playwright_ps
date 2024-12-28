@@ -11,7 +11,7 @@ test.skip('Mulitple dropdown selection', async ({ page }) => {
 
   page.on('dialog', async (dialog) => {
     //const alerts = console.log(`Dialog type: ${dialog.type()}`) ||
-    console.log(`Dialog message: ${dialog.message()}`);
+       console.log(`Dialog message: ${dialog.message()}`);
     await dialog.accept();
   })
 
