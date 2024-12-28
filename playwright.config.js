@@ -1,6 +1,5 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-const { on } = require('events');
 
 /**
  * Read environment variables from file.
@@ -18,46 +17,45 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  //retries: process.env.CI ? 2 : 0,
+   retries:1,
+
+
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  //workers: process.env.CI ? 1 : undefined,
+  workers:5,
+
+
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['json', { outputFile: 'results.json' }] ,
+
+  ['allure-playwright', {outputFolder: 'allure-results'}],
+],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    
-    //time set by suresh//******SURESH*********** */
-    /*headless : true,
-    actionTimeout: 10 * 1000,
-    navigationTimeout: 30 * 1000,*/
-
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
-
+timeout :50000,
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: 
-      
-      {browserName:'chromium',
-        /*'Desktop Chrome'] */
-        Viewport:null,
+      use: { browserName: 'chromium' ,
+        viewport:null,
+        slowMo: 2000,
+        launchOptions :{args:["--start-maximized"]
 
-       // launchOptions: {args: ['--start-maximized']},
-        
         },
-             
-
       },
-      
-    
 
-    /*{
+    },
+
+    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -65,7 +63,7 @@ module.exports = defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },*/
+    },
 
     /* Test against mobile viewports. */
     // {
