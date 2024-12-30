@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -85,13 +85,13 @@
   },
   "suites": [
     {
-      "title": "MIniproject.spec.js",
-      "file": "MIniproject.spec.js",
+      "title": "webtable.spec.js",
+      "file": "webtable.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Mini project swaglab",
+          "title": "webtable data",
           "ok": true,
           "tags": [],
           "tests": [
@@ -105,29 +105,35 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 27946,
+                  "duration": 4591,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "SauceCard #31337\n"
+                      "text": "prinitng the total number of row : 7\n"
+                    },
+                    {
+                      "text": "prinitng the total number of columns : 4\n"
+                    },
+                    {
+                      "text": "Table Data as an Array:  [\n  [],\n  [ \u001b[32m'Learn Selenium'\u001b[39m, \u001b[32m'Amit'\u001b[39m, \u001b[32m'Selenium'\u001b[39m, \u001b[32m'300'\u001b[39m ],\n  [ \u001b[32m'Learn Java'\u001b[39m, \u001b[32m'Mukesh'\u001b[39m, \u001b[32m'Java'\u001b[39m, \u001b[32m'500'\u001b[39m ],\n  [ \u001b[32m'Learn JS'\u001b[39m, \u001b[32m'Animesh'\u001b[39m, \u001b[32m'Javascript'\u001b[39m, \u001b[32m'300'\u001b[39m ],\n  [ \u001b[32m'Master In Selenium'\u001b[39m, \u001b[32m'Mukesh'\u001b[39m, \u001b[32m'Selenium'\u001b[39m, \u001b[32m'3000'\u001b[39m ],\n  [ \u001b[32m'Master In Java'\u001b[39m, \u001b[32m'Amod'\u001b[39m, \u001b[32m'JAVA'\u001b[39m, \u001b[32m'2000'\u001b[39m ],\n  [ \u001b[32m'Master In JS'\u001b[39m, \u001b[32m'Amit'\u001b[39m, \u001b[32m'Javascript'\u001b[39m, \u001b[32m'1000'\u001b[39m ]\n]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-28T13:59:05.217Z",
+                  "startTime": "2024-12-30T07:44:09.649Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "39e95b74a1eabc81503b-4b51cf19fd3d0b967abd",
-          "file": "MIniproject.spec.js",
+          "id": "d5e146523f3a598dac9b-404eb3a24128c55d6ca9",
+          "file": "webtable.spec.js",
           "line": 3,
-          "column": 1
+          "column": 6
         },
         {
-          "title": "Click on Backpack button in inventory",
+          "title": "checking the data",
           "ok": true,
           "tags": [],
           "tests": [
@@ -141,31 +147,74 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 17840,
+                  "duration": 3804,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m197\u001b[39m\n"
+                    },
+                    {
+                      "text": "[\n  \u001b[32m'\\nVisited\\n'\u001b[39m,\n  \u001b[32m'\\nCountry\\n'\u001b[39m,\n  \u001b[32m'\\nCapital(s)\\n'\u001b[39m,\n  \u001b[32m'\\nCurrency\\n'\u001b[39m,\n  \u001b[32m'\\nPrimary Language(s)\\n'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Afghanistan'\u001b[39m,\n  \u001b[32m'Kabul'\u001b[39m,\n  \u001b[32m'Afghani'\u001b[39m,\n  \u001b[32m'Dari Persian; Pashto'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Albania'\u001b[39m,\n  \u001b[32m'Tirane'\u001b[39m,\n  \u001b[32m'Lek'\u001b[39m,\n  \u001b[32m'Albanian'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Algeria'\u001b[39m,\n  \u001b[32m'Algiers'\u001b[39m,\n  \u001b[32m'Algerian Dinar'\u001b[39m,\n  \u001b[32m'Arabic; Tamazight; French'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Andorra'\u001b[39m,\n  \u001b[32m'Andorra la Vella'\u001b[39m,\n  \u001b[32m'Euro'\u001b[39m,\n  \u001b[32m'Catalan'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Angola'\u001b[39m,\n  \u001b[32m'Luanda'\u001b[39m,\n  \u001b[32m'Kwanza'\u001b[39m,\n  \u001b[32m'Portuguese'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Antigua & Barbuda'\u001b[39m,\n  \u001b[32m'Saint John’s'\u001b[39m,\n  \u001b[32m'East Caribbean Dollar'\u001b[39m,\n  \u001b[32m'English'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Argentina'\u001b[39m,\n  \u001b[32m'Buenos Aires'\u001b[39m,\n  \u001b[32m'Argentine Peso'\u001b[39m,\n  \u001b[32m'Spanish'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Armenia'\u001b[39m,\n  \u001b[32m'Yerevan'\u001b[39m,\n  \u001b[32m'Dram'\u001b[39m,\n  \u001b[32m'Armenian'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Australia'\u001b[39m,\n  \u001b[32m'Canberra'\u001b[39m,\n  \u001b[32m'Australian Dollar'\u001b[39m,\n  \u001b[32m'English'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Austria'\u001b[39m,\n  \u001b[32m'Vienna'\u001b[39m,\n  \u001b[32m'Euro'\u001b[39m,\n  \u001b[32m'German'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Azerbaijan'\u001b[39m,\n  \u001b[32m'Baku'\u001b[39m,\n  \u001b[32m'Manat'\u001b[39m,\n  \u001b[32m'Azerbaijani'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'The Bahamas'\u001b[39m,\n  \u001b[32m'Nassau'\u001b[39m,\n  \u001b[32m'Bahamian Dollar'\u001b[39m,\n  \u001b[32m'English'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Bahrain'\u001b[39m,\n  \u001b[32m'Manama'\u001b[39m,\n  \u001b[32m'Bahraini Dinar'\u001b[39m,\n  \u001b[32m'Arabic'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Bangladesh'\u001b[39m,\n  \u001b[32m'Dhaka'\u001b[39m,\n  \u001b[32m'Taka'\u001b[39m,\n  \u001b[32m'Bangla'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Barbados'\u001b[39m,\n  \u001b[32m'Bridgetown'\u001b[39m,\n  \u001b[32m'Barbadian Dollar'\u001b[39m,\n  \u001b[32m'English'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Belarus'\u001b[39m,\n  \u001b[32m'Minsk'\u001b[39m,\n  \u001b[32m'Belarusian Ruble'\u001b[39m,\n  \u001b[32m'Belarusian; Russian'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Belgium'\u001b[39m,\n  \u001b[32m'Brussels'\u001b[39m,\n  \u001b[32m'Euro'\u001b[39m,\n  \u001b[32m'Dutch; French; German'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Belize'\u001b[39m,\n  \u001b[32m'Belmopan'\u001b[39m,\n  \u001b[32m'Belize Dollar'\u001b[39m,\n  \u001b[32m'English'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Benin'\u001b[39m,\n  \u001b[32m'Porto-Novo'\u001b[39m,\n  \u001b[32m'West African CFA Franc'\u001b[39m,\n  \u001b[32m'French'\u001b[39m,\n  ... 885 more items\n]\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-28T13:59:05.215Z",
+                  "startTime": "2024-12-30T07:44:09.642Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "39e95b74a1eabc81503b-bd89b708cbbf010eb1cb",
-          "file": "MIniproject.spec.js",
-          "line": 71,
-          "column": 1
+          "id": "d5e146523f3a598dac9b-be101d1a3768bca03a65",
+          "file": "webtable.spec.js",
+          "line": 66,
+          "column": 6
+        },
+        {
+          "title": "alternative way of pritning the the data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 1090,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Table Data as an Array:  []\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-30T07:44:09.641Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5e146523f3a598dac9b-7d86494e5519f40c4031",
+          "file": "webtable.spec.js",
+          "line": 83,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-28T13:59:03.888Z",
-    "duration": 30586.334000000003,
-    "expected": 2,
+    "startTime": "2024-12-30T07:44:08.818Z",
+    "duration": 6650.778,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

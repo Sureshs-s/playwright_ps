@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { clear } = require('console');
 
 test.skip('Mulitple dropdown selection', async ({ page }) => {
   /*await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -46,12 +47,12 @@ await page.waitForLoadState();
   console.log('Hotel Names:', hotelNames);
 
   // Close browser
-  await browser.close();
+  await page.close();
  });
 
 
  
-test.only('swigy hotel names',async ({page}) => {
+test.expect('swigy hotel names',async ({page}) => {
   // Launch the browser
   //const browser = await chromium.launch({ headless: false });
   //const page = await browser.newPage();
@@ -83,19 +84,22 @@ test.only('swigy hotel names',async ({page}) => {
 
 });
 
-test.only('zomato hotel things',async ({page}) => {
+test('zomato hotel things',async ({page}) => {
   // Launch the browser
   //const browser = await chromium.launch({ headless: false });
   //const page = await browser.newPage();
 
   // Navigate to Swiggy's website
-  await page.goto('https://www.zomato.com/chennai', { waitUntil: 'domcontentloaded' });
+  //await page.goto('https://www.zomato.com/chennai', { waitUntil: 'domcontentloaded' });
+  await page.goto('https://www.zomato.com/chennai');
+
+  await page.waitForLoadState();
 
   // Wait for restaurant elements to load
-  await page.waitForSelector('div.sc-1mo3ldo-0'); // Update selector if it changes
+  await page.waitForSelector("//h4[@class='sc-1hp8d8a-0 sc-Ehqfj bxOQva']"); // Update selector if it changes
 
   // Select all elements matching the CSS selector
-  const restaurantElements = await page.$$('div.sc-1mo3ldo-0');
+  const restaurantElements = await page.$$("//h4[@class='sc-1hp8d8a-0 sc-Ehqfj bxOQva']");
 
   // Extract and print the restaurant names
   const restaurantNames = [];
@@ -110,5 +114,5 @@ test.only('zomato hotel things',async ({page}) => {
   console.log('Restaurant Names:', restaurantNames);
 
   // Close the browser
-  await browser.close();
+  await  page.close();
 });

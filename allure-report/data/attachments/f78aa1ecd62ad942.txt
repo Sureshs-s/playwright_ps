@@ -1,0 +1,11 @@
+Restaurant Names: [
+  'Noci Adante',
+  'Khaas - The Elevated Indian Kitchen & Bar',
+  'Garrison',
+  'Cocomaya',
+  'Mamagoto',
+  'Libarrel',
+  'The Madras Taproom',
+  'Goldman’s Steakhouse',
+  'Chilli Malli'
+]

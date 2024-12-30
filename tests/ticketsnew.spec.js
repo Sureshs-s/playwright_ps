@@ -62,7 +62,7 @@ await page.click("//input[@id='checkbox2']");
 //input[@placeholder='Last Name']
 });
 
-test.only ("Dropdown2" ,async({page})=>{
+/*test.only ("Dropdown2" ,async({page})=>{
   
   await page.goto("https://testautomationpractice.blogspot.com/");
 
@@ -73,17 +73,12 @@ test.only ("Dropdown2" ,async({page})=>{
 
 
   //const restaurantNames = []
-  for (const option of dropdownfile){
+  for (const option of dropdownfile ){
     const listing = await option.textContent();
   }
   console.log("printing the country :" + listing);
 
-
-
-
-
-
-});
+});*/
 
 
 
