@@ -68,7 +68,7 @@ test("Mini project swaglab", async ({ page }) => {
 
 
 
-test('Click on Backpack button in inventory', async ({ page }) => {
+test.only('Click on Backpack button in inventory', async ({ page }) => {
 
 
 
