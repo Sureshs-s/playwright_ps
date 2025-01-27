@@ -37,7 +37,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
@@ -51,7 +51,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
@@ -65,7 +65,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
@@ -80,7 +80,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 1,
+    "workers": 5,
     "webServer": null
   },
   "suites": [
@@ -103,14 +103,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 17545,
+                  "duration": 17703,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-17T14:06:18.567Z",
+                  "startTime": "2025-01-23T13:51:07.098Z",
                   "attachments": []
                 }
               ],
@@ -125,21 +125,10 @@
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\POM\\Loginpage.js: Missing semicolon. (15:6)\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m  \u001b[90m//reusbale Function/methods\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m  \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39mpasscode){\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mtype(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39musername\u001b[33m,\u001b[39musername)\u001b[33m;\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\POM\\Loginpage.js: Missing semicolon. (15:6)\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m  \u001b[90m//reusbale Function/methods\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m  \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39mpasscode){\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mtype(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39musername\u001b[33m,\u001b[39musername)\u001b[33m;\u001b[39m\u001b[0m\n    at Object.<anonymous> (C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\Swaglab.spec.js:2:21)",
-      "location": {
-        "file": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\Swaglab.spec.js",
-        "line": 15,
-        "column": 6
-      },
-      "snippet": "\u001b[90m   at \u001b[39mSwaglab.spec.js:15\n\n\u001b[0m\u001b[0m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-01-17T14:06:16.217Z",
-    "duration": 19987.81700000167,
+    "startTime": "2025-01-23T13:51:06.032Z",
+    "duration": 20718.238,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
