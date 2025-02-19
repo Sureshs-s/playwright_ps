@@ -1,0 +1,11 @@
+Restaurant Names: [
+  'Sundays',
+  'Noci Adante',
+  'Sin & Tonic',
+  'Farzi Cafe',
+  'Chilli Malli',
+  'Garrison',
+  'Cocomaya',
+  'Mamagoto',
+  'Texas Bar & Kitchen'
+]

@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test("Mini project swaglab", async ({ page }) => {
+test.only("Mini project swaglab", async ({ page }) => {
  await page.setViewportSize({width:1530,height:810}) 
   await page.goto("https://www.saucedemo.com/");
   //await page.fill('input[name="user-name"]', "standard_user");
@@ -109,5 +109,106 @@ test.only('Click on Backpack button in inventory', async ({ page }) => {
     await page.mouse.up();
     await page.waitForTimeout(2000)
     await page.screenshot({ path: "PICKING _BACKPACK.png" });
+  }
+});
+
+
+
+test.skip("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
+  // Set viewport size
+  await page.setViewportSize({ width: 1530, height: 810 });
+
+  // Navigate to the Swag Labs login page
+  await page.goto("https://www.saucedemo.com/");
+
+  // Assert page title and URL
+  await expect(page).toHaveTitle("Swag Labs");
+  await expect(page).toHaveURL("https://www.saucedemo.com/");
+
+  // Login with valid credentials
+  await page.fill('#user-name', "standard_user");
+  await page.fill('input[name="password"]', "secret_sauce");
+  await page.click("text=Login");
+  await page.waitForTimeout(3000); // Wait for login to complete
+
+  // Add items to the cart
+  await page.click("text=Sauce Labs Backpack");
+  await page.click("#add-to-cart-sauce-labs-backpack");
+  await page.click('#back-to-products');
+  await page.waitForTimeout(3000);
+
+  // Verify product name on the page
+  await expect(page.locator("text=Test.allTheThings() T-Shirt (Red)")).toBeVisible();
+
+  // Add more items to the cart
+  await page.click("#add-to-cart-sauce-labs-bolt-t-shirt");
+  await page.click("#add-to-cart-sauce-labs-fleece-jacket");
+  await page.mouse.wheel(0, 500); // Scroll down
+  await page.waitForTimeout(3000);
+  await page.click("#add-to-cart-test.allthethings()-t-shirt-(red)");
+  await page.mouse.wheel(0, -500); // Scroll up
+  await page.waitForTimeout(3000);
+
+  // Navigate to the cart and remove an item
+  await page.click(".shopping_cart_link");
+  await page.click("#remove-sauce-labs-backpack");
+  await page.waitForTimeout(3000);
+
+  // Proceed to checkout
+  await page.click("#checkout");
+
+  // Fill in customer information
+  await page.fill("#first-name", "John");
+  await page.fill("#last-name", "Doe");
+  await page.fill("#postal-code", "12345");
+  await page.waitForTimeout(3000);
+  await page.click("#continue");
+
+  // Take a screenshot of the overview page
+  await page.screenshot({ path: "screenshot_final.png" });
+  await page.waitForTimeout(2000);
+
+  // Log payment information
+  const paymentInfo = await page.locator("text=SauceCard #31337").textContent();
+  console.log("Payment Information:", paymentInfo);
+
+  // Complete the order
+  await page.click("text=Finish");
+  await page.waitForTimeout(5000);
+});
+
+test.skip("Add Bike Light to Cart from Inventory", async ({ page }) => {
+  // Set viewport size
+  await page.setViewportSize({ width: 1530, height: 810 });
+
+  // Navigate to the Swag Labs login page
+  await page.goto("https://www.saucedemo.com/");
+
+  // Assert page title and URL
+  await expect(page).toHaveTitle("Swag Labs");
+  await expect(page).toHaveURL("https://www.saucedemo.com/");
+
+  // Login with valid credentials
+  await page.fill('#user-name', "standard_user");
+  await page.fill('input[name="password"]', "secret_sauce");
+  await page.click("text=Login");
+  await page.waitForTimeout(3000);
+
+  // Locate all inventory items
+  const inventoryItems = await page.$$('.inventory_item');
+
+  for (const item of inventoryItems) {
+    const textContent = await item.textContent();
+
+    // Check if the item is the "Sauce Labs Bike Light"
+    if (textContent.includes("Sauce Labs Bike Light")) {
+      const addToCartButton = await item.$('.btn_primary.btn_inventory');
+      if (addToCartButton) {
+        await addToCartButton.click();
+        await page.waitForTimeout(2000); // Wait for the action to complete
+        await page.screenshot({ path: "picking_bike_light.png" }); // Take a screenshot
+        break; // Exit the loop after finding and clicking the button
+      }
+    }
   }
 });

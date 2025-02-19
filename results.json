@@ -37,7 +37,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
@@ -51,7 +51,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
@@ -65,7 +65,7 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
@@ -80,18 +80,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 5,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "MIniproject.spec.js",
-      "file": "MIniproject.spec.js",
+      "title": "Multipledropdown.spec.js",
+      "file": "Multipledropdown.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Click on Backpack button in inventory",
+          "title": "zomato hotel things",
           "ok": true,
           "tags": [],
           "tests": [
@@ -105,30 +105,34 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 17703,
+                  "duration": 3789,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Restaurant Names: [\n  \u001b[32m'SOS - Same Old Story'\u001b[39m,\n  \u001b[32m'Message In A Bottle'\u001b[39m,\n  \u001b[32m'Inti Bhojanam'\u001b[39m,\n  \u001b[32m'Mercato at Pullman Chennai Anna Salai'\u001b[39m,\n  \u001b[32m'The Great Kabab Factory - Radisson Blu'\u001b[39m,\n  \u001b[32m'Enoki'\u001b[39m,\n  \u001b[32m'Bombay Brasserie'\u001b[39m,\n  \u001b[32m'Lord of the Drinks'\u001b[39m,\n  \u001b[32m'The Gin Joint'\u001b[39m\n]\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-23T13:51:07.098Z",
+                  "startTime": "2025-02-18T04:44:59.366Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "39e95b74a1eabc81503b-bd89b708cbbf010eb1cb",
-          "file": "MIniproject.spec.js",
-          "line": 71,
-          "column": 6
+          "id": "71e3f393bd7ab43f2e50-37ae68f8e390ceed51dc",
+          "file": "Multipledropdown.spec.js",
+          "line": 87,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-23T13:51:06.032Z",
-    "duration": 20718.238,
+    "startTime": "2025-02-18T04:44:56.359Z",
+    "duration": 8362.797999999995,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

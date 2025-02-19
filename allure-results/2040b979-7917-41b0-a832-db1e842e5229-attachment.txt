@@ -1,0 +1,11 @@
+Restaurant Names: [
+  'SOS - Same Old Story',
+  'Message In A Bottle',
+  'Inti Bhojanam',
+  'Mercato at Pullman Chennai Anna Salai',
+  'The Great Kabab Factory - Radisson Blu',
+  'Enoki',
+  'Bombay Brasserie',
+  'Lord of the Drinks',
+  'The Gin Joint'
+]
