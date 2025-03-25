@@ -132,4 +132,63 @@ test('webtable ', async({page})=>{
     // Print the entire table data
     console.log("Table Data as an Array: ", tableData);
 
+    await page.close();
+
 });
+
+
+
+
+
+test('Add three different brand shoes to Amazon cart', async ({ page }) => {
+    await page.goto('https://www.amazon.in/'); // Change URL if needed
+
+    // Search for shoes
+    await page.fill("input[name='field-keywords']", "shoes for men");
+    await page.press("input[name='field-keywords']", 'Enter');
+    await page.waitForTimeout(3000); // Wait for results to load
+
+    let addedBrands = new Set(); // To store different brands
+    let shoeCount = 0;
+
+    for (let i = 0; shoeCount < 3; i++) {
+        const shoe = page.locator("//div[@role='listitem']").nth(i);
+
+        // Extract brand name
+        const brand = await shoe.locator("//h2[contains(@class, 'a-size-mini')]/parent::div/following-sibling::a").innerText();
+
+        if (!addedBrands.has(brand)) {
+            addedBrands.add(brand); // Store the brand name
+
+            // Click to open the shoe details
+            await shoe.locator("//h2[contains(@class, 'a-size-mini')]/parent::div/following-sibling::a").click();
+            await page.waitForTimeout(2000);
+
+            // Wait for 'Add to Cart' button and click it
+            await page.waitForSelector("input[name='submit.add-to-cart']", { state: 'visible' });
+            await page.locator("input[name='submit.add-to-cart']").click();
+
+            // Handle potential warranty popup
+            if (await page.locator("#attachSiNoCoverage-announce").isVisible()) {
+                await page.click("#attachSiNoCoverage-announce");
+            }
+
+            // Wait for confirmation
+            await page.waitForTimeout(2000);
+
+            // Go back to search results
+            await page.goBack();
+            shoeCount++;
+        }
+    }
+
+    // Go to cart
+    await page.click("#nav-cart");
+
+    // Verify cart contains 3 items
+    const cartItems = await page.locator(".sc-list-item").count();
+    expect(cartItems).toBe(3);
+
+    console.log("Test passed: 3 different brand shoes successfully added to cart.");
+});
+

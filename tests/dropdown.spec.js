@@ -45,13 +45,13 @@ const page = await browser.newPage()*/
 test.only('Multiple dropdown', async ({ page }) => {
   const browser = await chromium.launch({ headless: false });*/
 
-test.skip('checking dropdown',async ({page}) => {
+test.only('checking dropdown',async ({page}) => {
   
   // Navigate to the Booking.com search results page
   const url = 'https://www.booking.com/searchresults.html?ss=New+York%2C+New+York%2C+United+States&efdco=1&label=gen173bo-1DCAEoggI46AdIM1gDaGyIAQGYATG4ARfIAQzYAQPoAQH4AQKIAgGYAgKoAgO4Avq35roGwAIB0gIkYzliNWM3MDItYmI4YS00MzViLWJjMGMtMDJkYjExYzVmYjM22AIE4AIB&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=20088325&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=2b2262fde14a00b9&ac_meta=GhAyYjIyNjJmZGUxNGEwMGI5IAAoATICZW46B25ld3lvcmtAAEoAUAA%3D&group_adults=2&no_rooms=1&group_children=0';
   await page.goto(url);
 
-await page.click("//button[@aria-label='Dismiss sign-in info.']");
+//await page.click("//button[@aria-label='Dismiss sign-in info.']");
 
   // Wait for the hotel list to load
   ///await page.waitForSelector('.sr_property_block_main_row');

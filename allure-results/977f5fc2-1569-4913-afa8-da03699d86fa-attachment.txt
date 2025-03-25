@@ -1,0 +1,11 @@
+Restaurant Names: [
+  'Flash Back',
+  'Secret Story',
+  'Message In A Bottle',
+  'SOS - Same Old Story',
+  'The Void',
+  'Glow Cafe',
+  'The Great Kabab Factory - Radisson Blu',
+  'Enoki',
+  'Hard Rock Cafe'
+]

@@ -23,7 +23,7 @@ test.skip('Bookmy show login page', async ({ page }) => {
 
 });
 
-test.skip ("assertion testing" ,async({page})=>{
+test.only ("assertion testing" ,async({page})=>{
   
 await page.goto("https://demo.automationtesting.in/Register.html");
 

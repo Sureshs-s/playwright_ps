@@ -1,0 +1,17 @@
+Airport List: [
+  'Mumbai, IndiaBOM Chhatrapati Shivaji International Airport',
+  'Pune, IndiaPNQ Pune Airport',
+  'Surat, IndiaSTV Surat International Airport',
+  'Shirdi, IndiaSAG Shirdi Airport',
+  'Aurangabad, IndiaIXU Aurangabad Airport',
+  'Diu, IndiaDIU Diu Airport',
+  'Goodnews Bay, United StatesGNU Goodnews Bay-AK',
+  'Columbus, United StatesCMH Columbus-OH',
+  'Hanoi, VietnamHAN Noibai',
+  'Coimbatore, IndiaCJB Coimbatore Airport',
+  'Indore, IndiaIDR Devi Ahilyabai Holkar International Airport',
+  'Hue, VietnamHUI Phu Bai',
+  'Baishan, ChinaNBS Baishan',
+  'Tanjung Pandan, IndonesiaTJQ Bulutumbang',
+  'Baise, ChinaAEB Tianyang'
+]

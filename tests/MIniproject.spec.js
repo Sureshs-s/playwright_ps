@@ -114,7 +114,7 @@ test.only('Click on Backpack button in inventory', async ({ page }) => {
 
 
 
-test.skip("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
+test.only("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
   // Set viewport size
   await page.setViewportSize({ width: 1530, height: 810 });
 
@@ -133,7 +133,8 @@ test.skip("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
 
   // Add items to the cart
   await page.click("text=Sauce Labs Backpack");
-  await page.click("#add-to-cart-sauce-labs-backpack");
+  //await page.click("#add-to-cart-sauce-labs-backpack");
+  await page.click('#add-to-cart');
   await page.click('#back-to-products');
   await page.waitForTimeout(3000);
 
@@ -145,7 +146,7 @@ test.skip("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
   await page.click("#add-to-cart-sauce-labs-fleece-jacket");
   await page.mouse.wheel(0, 500); // Scroll down
   await page.waitForTimeout(3000);
-  await page.click("#add-to-cart-test.allthethings()-t-shirt-(red)");
+  await page.click('.add-to-cart-test.allthethings()-t-shirt-(red)');
   await page.mouse.wheel(0, -500); // Scroll up
   await page.waitForTimeout(3000);
 

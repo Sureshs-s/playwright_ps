@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { clear } = require('console');
 
-test.skip('Mulitple dropdown selection', async ({ page }) => {
+test.only('Mulitple dropdown selection', async ({ page }) => {
   /*await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.fill("//input[@name='username']",'Admin');
   await page.fill("//input[@type='password']",'admin123');
@@ -52,7 +52,7 @@ await page.waitForLoadState();
 
 
  
-test.expect('swigy hotel names',async ({page}) => {
+test.only('swigy hotel names',async ({page}) => {
   // Launch the browser
   //const browser = await chromium.launch({ headless: false });
   //const page = await browser.newPage();
@@ -84,7 +84,7 @@ test.expect('swigy hotel names',async ({page}) => {
 
 });
 
-test('zomato hotel things',async ({page}) => {
+test.skip('zomato hotel things',async ({page}) => {
   // Launch the browser
   //const browser = await chromium.launch({ headless: false });
   //const page = await browser.newPage();
@@ -115,4 +115,93 @@ test('zomato hotel things',async ({page}) => {
 
   // Close the browser
   await  page.close();
+});
+
+
+test.only ('list of 1500 to 2000' , async ({page}) =>{
+  await page.goto('https://www.makemytrip.com/');
+
+  await page.locator('//span[@data-cy="closeModal"]').click();
+  await page.waitForTimeout(2000);
+
+  const clickform = await page.locator('//label[@for="fromCity"]');
+  await clickform.hover();
+  await page.waitForTimeout(3000);
+  await page.click('#fromCity')
+
+  
+  await page.getByPlaceholder('From').fill('mumbai');
+
+  const glist = await page.$$('//li[@role="option"]');
+  await page.waitForTimeout(2000);
+
+  for(const list of glist){
+      const airportname = await list.textContent();
+      console.log(airportname);
+      // console.log(li);
+  }
+  await page.waitForTimeout(5000);
+  
+
+
+
+});
+
+
+
+test.only('chatgpt list of 1500 to 2000', async ({ page }) => {
+  await page.goto('https://www.makemytrip.com/');
+  
+  // Close the login popup if it appears
+  await page.locator('//span[@data-cy="closeModal"]').click();
+  await page.waitForTimeout(2000);
+
+  // Click on "From" input
+  await page.locator('#fromCity').click();
+  await page.getByPlaceholder('From').fill('mumbai');
+  
+  // Wait for the dropdown to populate
+  await page.waitForTimeout(2000);
+
+  // Get all airport list items
+  const glist = await page.$$('//li[@role="option"]');
+  const airportlist = [];
+
+  for (const list of glist) {
+      const airportname = await list.textContent();
+      if (airportname) {
+          airportlist.push(airportname.trim());
+      }
+  }
+
+  console.log('Airport List:', airportlist);
+
+  await page.waitForTimeout(5000);
+});
+
+
+
+test.only('ChatGPT Google list printing in console', async ({ page }) => {
+    await page.goto('https://www.google.co.in/');
+
+    // Fill search box and wait for suggestions
+    const searchBox = page.locator('[name="q"]');
+    await searchBox.fill('tom and jerry');
+
+    // Ensure suggestions list appears
+    const suggestionList = page.locator('//ul[@role="listbox"]//li');
+    await expect(suggestionList.first()).toBeVisible();
+
+    // Get all suggestions
+    const suggestionsCount = await suggestionList.count();
+    let suggestionlist = [];
+
+    for (let i = 0; i < suggestionsCount; i++) {
+        const text = await suggestionList.nth(i).textContent();
+        if (text) {
+            suggestionlist.push(text.trim());
+        }
+    }
+
+    console.log('Google suggestions for "tom and jerry":', suggestionlist);
 });
