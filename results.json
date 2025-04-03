@@ -85,13 +85,13 @@
   },
   "suites": [
     {
-      "title": "Multipledropdown.spec.js",
-      "file": "Multipledropdown.spec.js",
+      "title": "MIniproject.spec.js",
+      "file": "MIniproject.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "chatgpt list of 1500 to 2000",
+          "title": "Mini project Swag Labs - End-to-End Test",
           "ok": true,
           "tags": [],
           "tests": [
@@ -103,27 +103,27 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11235,
+                  "duration": 27091,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Airport List: [\n  \u001b[32m'Mumbai, IndiaBOM Chhatrapati Shivaji International Airport'\u001b[39m,\n  \u001b[32m'Pune, IndiaPNQ Pune Airport'\u001b[39m,\n  \u001b[32m'Surat, IndiaSTV Surat International Airport'\u001b[39m,\n  \u001b[32m'Shirdi, IndiaSAG Shirdi Airport'\u001b[39m,\n  \u001b[32m'Aurangabad, IndiaIXU Aurangabad Airport'\u001b[39m,\n  \u001b[32m'Diu, IndiaDIU Diu Airport'\u001b[39m,\n  \u001b[32m'Goodnews Bay, United StatesGNU Goodnews Bay-AK'\u001b[39m,\n  \u001b[32m'Columbus, United StatesCMH Columbus-OH'\u001b[39m,\n  \u001b[32m'Hanoi, VietnamHAN Noibai'\u001b[39m,\n  \u001b[32m'Coimbatore, IndiaCJB Coimbatore Airport'\u001b[39m,\n  \u001b[32m'Indore, IndiaIDR Devi Ahilyabai Holkar International Airport'\u001b[39m,\n  \u001b[32m'Hue, VietnamHUI Phu Bai'\u001b[39m,\n  \u001b[32m'Baishan, ChinaNBS Baishan'\u001b[39m,\n  \u001b[32m'Tanjung Pandan, IndonesiaTJQ Bulutumbang'\u001b[39m,\n  \u001b[32m'Baise, ChinaAEB Tianyang'\u001b[39m\n]\n"
+                      "text": "Payment Information: SauceCard #31337\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-21T12:06:49.947Z",
+                  "startTime": "2025-04-02T09:13:18.971Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "71e3f393bd7ab43f2e50-11ff4a363c12bf3b9aed",
-          "file": "Multipledropdown.spec.js",
-          "line": 152,
+          "id": "39e95b74a1eabc81503b-7375f2bc01394a31d526",
+          "file": "MIniproject.spec.js",
+          "line": 116,
           "column": 6
         }
       ]
@@ -152,8 +152,8 @@
     }
   ],
   "stats": {
-    "startTime": "2025-03-21T12:06:48.314Z",
-    "duration": 12941.741999998689,
+    "startTime": "2025-04-02T09:13:16.418Z",
+    "duration": 30946.685000000056,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -63,7 +63,6 @@ test.only("Mini project swaglab", async ({ page }) => {
   await page.waitForTimeout(5000);
 //await page.pause();
   await page.click("text=Finish");
-  
 });
 
 
@@ -146,7 +145,7 @@ test.only("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
   await page.click("#add-to-cart-sauce-labs-fleece-jacket");
   await page.mouse.wheel(0, 500); // Scroll down
   await page.waitForTimeout(3000);
-  await page.click('.add-to-cart-test.allthethings()-t-shirt-(red)');
+  await page.click("//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']");
   await page.mouse.wheel(0, -500); // Scroll up
   await page.waitForTimeout(3000);
 
@@ -178,7 +177,7 @@ test.only("Mini project Swag Labs - End-to-End Test", async ({ page }) => {
   await page.waitForTimeout(5000);
 });
 
-test.skip("Add Bike Light to Cart from Inventory", async ({ page }) => {
+test.only("Add Bike Light to Cart from Inventory", async ({ page }) => {
   // Set viewport size
   await page.setViewportSize({ width: 1530, height: 810 });
 
