@@ -12,5 +12,8 @@ await page.waitForTimeout(3000);
 
 //await page.click("")
 
+//await page.click("")
+
+//await page.click("")
 
 });
