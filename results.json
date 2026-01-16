@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -30,15 +30,17 @@
     ],
     "reportSlowTests": {
       "max": 5,
-      "threshold": 15000
+      "threshold": 300000
     },
     "quiet": false,
     "projects": [
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 3
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/tests",
@@ -51,8 +53,10 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 3
+        },
         "id": "firefox",
         "name": "firefox",
         "testDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/tests",
@@ -65,8 +69,10 @@
       {
         "outputDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 3
+        },
         "id": "webkit",
         "name": "webkit",
         "testDir": "C:/Users/ssure/VScode_ps/Playwright_Ps/tests",
@@ -78,9 +84,11 @@
       }
     ],
     "shard": null,
+    "tags": [],
     "updateSnapshots": "missing",
-    "version": "1.49.1",
-    "workers": 1,
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 5,
     "webServer": null
   },
   "suites": [
@@ -89,74 +97,233 @@
       "file": "MIniproject.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Mini project Swag Labs - End-to-End Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Swag Labs Mini Project",
+          "file": "MIniproject.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 50000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "End-to-End Purchase Flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 27091,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 50000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "Payment Information: SauceCard #31337\n"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-16T20:22:18.700Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1200\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-01-16T20:22:20.353Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\test-results\\MIniproject-Swag-Labs-Mini-Project-End-to-End-Purchase-Flow-chromium-retry1\\trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-04-02T09:13:18.971Z",
-                  "attachments": []
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "39e95b74a1eabc81503b-8fcb86c8ad43767da318",
+              "file": "MIniproject.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "End-to-End Purchase Flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 50000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-16T20:22:18.672Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\firefox-1497\\firefox\\firefox.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-01-16T20:22:20.247Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\test-results\\MIniproject-Swag-Labs-Mini-Project-End-to-End-Purchase-Flow-firefox-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "39e95b74a1eabc81503b-d7948fa06c90910495d2",
+              "file": "MIniproject.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "End-to-End Purchase Flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 50000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-16T20:22:18.677Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                        "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\ssure\\AppData\\Local\\ms-playwright\\webkit-2227\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-01-16T20:22:20.293Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\test-results\\MIniproject-Swag-Labs-Mini-Project-End-to-End-Purchase-Flow-webkit-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "39e95b74a1eabc81503b-d38c83ea77f5ff2ea842",
+              "file": "MIniproject.spec.js",
+              "line": 4,
+              "column": 3
             }
-          ],
-          "id": "39e95b74a1eabc81503b-7375f2bc01394a31d526",
-          "file": "MIniproject.spec.js",
-          "line": 116,
-          "column": 6
+          ]
         }
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\iframe.spec.js: Identifier 'page' has already been declared. (30:32)\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'ttd bypass'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m browser \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mlaunch({ headless\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Set to true for silent execution\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\iframe.spec.js: Identifier 'page' has already been declared. (30:32)\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'ttd bypass'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m browser \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mlaunch({ headless\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Set to true for silent execution\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m",
-      "location": {
-        "file": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\iframe.spec.js",
-        "line": 30,
-        "column": 32
-      },
-      "snippet": "\u001b[90m   at \u001b[39miframe.spec.js:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'ttd bypass'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m browser \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chromium\u001b[33m.\u001b[39mlaunch({ headless\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Set to true for silent execution\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\mouseactions.spec.js: Unexpected token, expected \"{\" (8:35)\n\n\u001b[0m \u001b[90m  6 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(path\u001b[33m=\u001b[39minput[\u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m'btn btn-lg btn-apply text-uppercase fw-bold'\u001b[39m]\u001b[32m');\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m \u001b[90m//await page.click('className=btn btn-lg btn-apply text-uppercase fw-bold');\u001b[39m\n \u001b[90m 11 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\mouseactions.spec.js: Unexpected token, expected \"{\" (8:35)\n\n\u001b[0m \u001b[90m  6 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(path\u001b[33m=\u001b[39minput[\u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m'btn btn-lg btn-apply text-uppercase fw-bold'\u001b[39m]\u001b[32m');\u001b[39m\n \u001b[90m    |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m \u001b[90m//await page.click('className=btn btn-lg btn-apply text-uppercase fw-bold');\u001b[39m\n \u001b[90m 11 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
-      "location": {
-        "file": "C:\\Users\\ssure\\VScode_ps\\Playwright_Ps\\tests\\mouseactions.spec.js",
-        "line": 8,
-        "column": 35
-      },
-      "snippet": "\u001b[90m   at \u001b[39mmouseactions.spec.js:8\n\n\u001b[0m \u001b[90m  6 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(path\u001b[33m=\u001b[39minput[\u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m'btn btn-lg btn-apply text-uppercase fw-bold'\u001b[39m]\u001b[32m');\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m \u001b[90m//await page.click('className=btn btn-lg btn-apply text-uppercase fw-bold');\u001b[39m\n \u001b[90m 11 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-04-02T09:13:16.418Z",
-    "duration": 30946.685000000056,
-    "expected": 1,
+    "startTime": "2026-01-16T20:22:16.922Z",
+    "duration": 3600.1950000000006,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 3,
     "flaky": 0
   }
 }
